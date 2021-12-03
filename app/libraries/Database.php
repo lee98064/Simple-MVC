@@ -10,28 +10,30 @@ class Database
 
     // 定義一些操作 Database 的變數，例如：
     private $dbh;
+    private $query_string;
     private $stmt;
     private $error;
 
     public function __construct()
     {
-        // 透過 PDO 建立資料庫連線
-        // 實例化 PDO
+        $this->dbh = new PDO("mysql:host={$this->host};dbname={$this->dbname};charset=utf8mb4",$this->user,$this->pass);
     }
 
     // Prepare statement with query
     public function query($query){
-        
+        $this->query_string = $this->dbh->prepare($query);
     }
 
     // Bind values
     public function bind($param, $value, $type = null){
-        
+        $this->query_string->bindParam($param,$value);
     }
 
     // 執行 prepared statement
     public function execute(){
-        
+        $result = $this->query_string->execute();
+       
+        return $this->query_string->fetchAll();
     }
 
     // 以下是 Model 可以操作資料庫的幾個預設方法

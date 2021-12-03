@@ -1,7 +1,7 @@
 <?php
 
 // Database 的參數，以下為範例
-define('DB_HOST', '127.0.0.1');
+define('DB_HOST', 'mysql');
 define('DB_NAME', 'db');
 define('DB_USER', 'user');
 define('DB_PASS', '1234');
@@ -13,5 +13,5 @@ define('APPROOT', dirname(dirname(__FILE__)) . '/');
 define('URLROOT', 'http://localhost:8080/public/');
 
 // 網站名稱
-define('SITENAME', '自製 MVC 框架');
+define('SITENAME', '資料庫管理系統');
 
