@@ -33,7 +33,7 @@ class Database
     public function execute(){
         $result = $this->query_string->execute();
        
-        return $this->query_string->fetchAll();
+        return $result;
     }
 
     // 以下是 Model 可以操作資料庫的幾個預設方法
@@ -41,7 +41,7 @@ class Database
     
     // 取得資料表的所有資料
     public function getAll(){
-        
+        return $this->query_string->fetchAll();   
     }
 
     // 取得資料表的單一筆資料

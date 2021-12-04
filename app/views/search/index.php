@@ -6,6 +6,7 @@
             <input type="text" class="form-control" name="cust_no">
         </div>
         <input type="submit" class="btn btn-primary" value="送出">
+        <input type="reset" class="btn btn-danger" value="清除">
     </form>
 
 
