@@ -10,7 +10,7 @@ class Customer extends Controller{
 
     public function index()
     {
-        $this->view('basic/index');
+        header("Location: /");
     }
 
     public function show()
@@ -37,11 +37,23 @@ class Customer extends Controller{
             header("Location: /customer/edit_search");
         }
     }
+    
+    public function delete_search()
+    {
+        $this->view('customer/delete_search');
+    }
 
     public function delete()
     {
+        if(isset($_POST["cust_no"])){
+            $basic = $this->basicModel->getBasicById($_POST["cust_no"]);
+            $this->view('customer/delete',$basic);
+        }else{
+            header("Location: /customer/delete_search");
+        }
         $this->view('customer/delete');
     }
+
 
     public function store()
     {
