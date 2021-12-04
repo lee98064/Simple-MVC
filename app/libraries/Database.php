@@ -46,7 +46,11 @@ class Database
 
     // 取得資料表的單一筆資料
     public function getSingle(){
-        
+        if ($this->query_string->rowCount() > 0){
+            return $this->query_string->fetch();
+        }else{
+            return [];
+        }
     }
 
     // 取得資料表中資料的筆數

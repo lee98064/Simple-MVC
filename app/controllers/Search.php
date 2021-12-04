@@ -1,4 +1,6 @@
-<?php 
+<?php
+
+use function PHPSTORM_META\type;
 
 class Search extends Controller{
 

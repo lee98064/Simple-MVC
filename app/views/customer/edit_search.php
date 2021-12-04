@@ -1,6 +1,5 @@
 <?php require APPROOT . 'views/inc/header.php'; ?>
-
-    <form action="/search/show" method="POST">
+    <form action="/customer/edit" method="POST">
         <div class="mb-3">
             <label class="form-label">客戶代號:</label>
             <input type="text" class="form-control" name="cust_no">

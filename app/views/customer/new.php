@@ -23,6 +23,7 @@
         </div>
         <input type="submit" class="btn btn-primary" value="送出">
         <input type="reset" class="btn btn-danger" value="清除">
+        <a class="btn btn-success" href="/">回主畫面</a>
     </form>
 
 
